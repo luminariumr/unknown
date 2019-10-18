@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link type="text/css" rel="stylesheet" href="css/main2.css" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Compiled Fontawesome Icons-->
+    <script
+      src="https://kit.fontawesome.com/a2442a0283.js"
+      crossorigin="anonymous"
+    ></script>
+
+       <!-- CK EDITOR 4-->
+       <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav id="colorHold">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="index2.html" class="brand-logo blue-text text-accent-2"
+            >Unknown</a
+          >
+          <a
+            href="#"
+            data-activates="mobile-nav"
+            class="button-collapse show-on-large right"
+            ><i class="material-icons">menu</i></a
+          >
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="dashboard.html" class="waves-effect waves-light"
+                >Dashboard</a
+              >
+              <a href="categories.html" class="waves-effect waves-light"
+                >Categories</a
+              >
+              <a href="posts.html" class="waves-effect waves-light">Posts</a>
+              <a href="users.html" class="waves-effect waves-light">Users</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SIDENAV-->
+    <ul class="side-nav" id="mobile-nav">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img src="img/wallpaper-art6.jpg" alt="" />
+          </div>
+          <a href="#"><img src="img/node-logo.png" class="circle" alt=""/></a>
+          <a href="#"><span class="email white-text">Jan Louie Lineses</span></a
+          ><a href="#"
+            ><span class="email white-text">luminariumdraise@gmail.com</span></a
+          >
+        </div>
+        <li><a href="dashboard.html"><i class="material-icons">dashboard</i>Dashboard</a></li>
+        <li><a href="categories.html"><i class="material-icons">dehaze</i>Categories</a></li>
+        <li><a href="posts.html"><i class="material-icons">create</i>Posts</a></li>
+        <li><a href="users.html"><i class="material-icons">group</i>Users</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="" class="subheader">Account Controls</a></li>
+        <li><a href="index2.html" class="waves-light waves-effect">Logout</a></li>
+      </li>
+    </ul>
+
+
+    <footer class="section blue darken-4 white-text center">
+        <p>Unknown Panel Copyright &copy; 2019</p>
+      </footer>
+
+
+<!--Import jQuery before materialize.js-->
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="js/piechart.js"></script>
+
+
+<script>
+  //       // JAVASCRIPT START HERE //
+  $(document).ready(function() {
+    // Init Sidenav
+    $(".button-collapse").sideNav();
+
+    // Scroll Spy
+    $(".scrollspy").scrollSpy();
+
+    // Home parallax
+    // $('#home').parallax();
+
+    // Material Boxed
+    // $('.materialboxed').materialbox();
+
+    // Carousel Slider
+    $(".carousel.carousel-slider").carousel({ fullWidth: true });
+
+    // Carousel autoplay slider
+    autoplay();
+    function autoplay() {
+      $(".carousel.carousel-slider").carousel("next");
+      setTimeout(autoplay, 4500);
+    }
+
+    // Modal Viewer
+    $(".modal").modal({
+      dismissable: true,
+      inDuration: 300,
+      outDuration: 200,
+      ready: function(modal, trigger) {
+        console.log("Modal Opened", modal, trigger);
+      }
+    });
+  });
+</script>
+</body>
+</html>

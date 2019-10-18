@@ -1,0 +1,45 @@
+.main-header {
+  background: url(../img/wallpaper-horizon.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  color: white;
+}
+
+.main-header .showcase {
+  padding-top: 80px;
+}
+
+.active-link {
+  color: #ff7e7e;
+  font-weight: bold;
+  font-size: 140%;
+}
+
+.section-blogs {
+  position: relative;
+  background: url(../img/wallpaper-art10.jpg);
+  background-size: cover;
+  min-height: 180px;
+  background-position: center;
+  border-top: #333333 solid 5px;
+  border-bottom: #333333 solid 5px;
+}
+
+.primary-overlay {
+  background: rgba(253, 130, 130, 0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.carousel p {
+  font-size: 20px !important;
+}
+
+@media (max-width: 500px) {
+  .section-blogs, .logos-brand;
+}
